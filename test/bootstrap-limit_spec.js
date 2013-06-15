@@ -1,5 +1,5 @@
 describe('BootstrapLimit', function(){
-  var fixture = '<input class="bl-test"><span id="counter"></span>';
+  var fixture = '<input class="bl-test" maxlength="20"><span id="counter"></span>';
 
   beforeEach(function(){
     var $fixtures, $input;
@@ -116,6 +116,16 @@ describe('BootstrapLimit', function(){
 
     it('triggers uncrossed event', function() {
       expect(this.spy).toHaveBeenCalled();
+    });
+  });
+
+  describe('removeMaxLengthAttr option', function() {
+    beforeEach(function() {
+      this.$input.limit({maxLength: 10, counter: '#counter', removeMaxLengthAttr: true});
+    });
+
+    it('removes maxlength attribute from the element', function() {
+      expect(this.$input.attr('maxlength')).toBeUndefined();
     });
   });
 });

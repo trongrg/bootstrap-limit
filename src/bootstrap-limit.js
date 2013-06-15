@@ -24,6 +24,10 @@
       this.initEvents();
       this.update();
 
+      if (this.options.removeMaxLengthAttr) {
+        this.$element.removeAttr('maxlength');
+      }
+
       var self = this;
       $.when.apply($, this.$element.get()).
         always(function() {
@@ -90,7 +94,8 @@
     maxLength: 140,
     color: 'red',
     threshold: 10,
-    counter: ''
+    counter: '',
+    removeMaxLengthAttr: false
   };
 
   $.fn.limit.Constructor = BootstrapLimit;
