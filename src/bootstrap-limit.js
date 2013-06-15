@@ -15,6 +15,7 @@
     this.maxLength = this.options.maxLength || this.maxLength;
     this.counter = $(this.options.counter) || this.counter;
     this.color = this.options.color || this.color;
+    this.threshold = this.options.threshold || this.threshold;
     this.initialize();
   };
 
@@ -49,6 +50,9 @@
       if (this.query.length > this.maxLength) {
         this.counter.css('color', this.color);
         this.$element.trigger('bootstrap-limit:crossed');
+      } else if (this.query.length > this.maxLength - this.threshold) {
+        this.counter.css('color', this.color);
+        this.$element.trigger('bootstrap-limit:uncrossed');
       } else {
         this.counter.removeAttr('style');
         this.$element.trigger('bootstrap-limit:uncrossed');
@@ -88,6 +92,7 @@
   $.fn.limit.defaults = {
     maxLength: 140,
     color: 'red',
+    threshold: 10,
     counter: ''
   };
 

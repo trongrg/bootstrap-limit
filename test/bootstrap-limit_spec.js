@@ -73,7 +73,7 @@ describe('BootstrapLimit', function(){
 
   describe('when uncross max length', function() {
     beforeEach(function() {
-      this.$input.limit({maxLength: 10, counter: '#counter'});
+      this.$input.limit({maxLength: 10, counter: '#counter', threshold: 0});
       this.$input.on('bootstrap-limit:uncrossed', this.spy = jasmine.createSpy());
       this.$input.val('12345678901').keyup();
       this.$input.val('123456789').keyup();
@@ -100,6 +100,22 @@ describe('BootstrapLimit', function(){
 
     it('changes counter color to custom color', function() {
       expect(this.$counter.css('color')).toEqual('rgb(0, 0, 255)');
+    });
+  });
+
+  describe('threshold', function() {
+    beforeEach(function() {
+      this.$input.limit({maxLength: 10, counter: '#counter', threshold: 5});
+      this.$input.on('bootstrap-limit:uncrossed', this.spy = jasmine.createSpy());
+      this.$input.val('123456').keyup();
+    });
+
+    it('changes counter color', function() {
+      expect(this.$counter.css('color')).toEqual('rgb(255, 0, 0)');
+    });
+
+    it('triggers uncrossed event', function() {
+      expect(this.spy).toHaveBeenCalled();
     });
   });
 });
