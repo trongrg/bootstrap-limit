@@ -1,0 +1,33 @@
+{
+  "licenses": [
+    {
+      "url": "https://github.com/trongrg/bootstrap-limit/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.9"
+  },
+  "docs": "https://github.com/trongrg/bootstrap-limit",
+  "demo": "",
+  "name": "bootstrap-limit",
+  "title": "bootstrap-limit",
+  "author": {
+    "name": "Trong Tran",
+    "url": "https://github.com/trongrg"
+  },
+  "description": "jquery plugin to simulate twitter's tweet box character countdown",
+  "keywords": [
+    "bootstrap",
+    "limit",
+    "maxlength"
+  ],
+  "homepage": "https://github.com/trongrg/bootstrap-limit"
+  "bugs": "https://github.com/trongrg/bootstrap-limit/issues",
+  "maintainers": [
+    {
+      "name": "Trong Tran",
+      "url": "https://github.com/trongrg"
+    }
+  ],
+  "version": "0.0.1"
+}

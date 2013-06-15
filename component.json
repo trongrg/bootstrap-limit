@@ -1,0 +1,10 @@
+{
+  "name": "bootstrap-limit",
+  "version": "0.0.1",
+  "main": [
+    "dist/bootstrap-limit.js"
+  ],
+  "dependencies": {
+    "jquery": "~1.9"
+  }
+}
