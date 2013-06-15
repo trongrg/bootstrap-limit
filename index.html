@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link href="https://fonts.googleapis.com/css?family=Chivo:900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/pygment_trac.css" media="screen">
+<link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/print.css" media="print">
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<title>Bootstrap-limit by trongrg</title>
+</head>
+
+<body>
+<div id="container">
+  <div class="inner">
+
+    <header>
+      <h1>Bootstrap-limit</h1>
+      <h2>Jquery plugin to simulate Twitter tweet character countdown</h2>
+    </header>
+
+    <section id="downloads" class="clearfix">
+      <a href="http://trongrg.github.io/bootstrap-limit/releases/latest/bootstrap-limit.js.zip" id="download-zip" class="button"><span>Download .zip</span></a>
+      <!-- <a href="https://github.com/trongrg/bootstrap&#45;limit/tarball/master" id="download&#45;tar&#45;gz" class="button"><span>Download .tar.gz</span></a> -->
+      <a href="https://github.com/trongrg/bootstrap-limit" id="view-on-github" class="button"><span>View on GitHub</span></a>
+    </section>
+
+    <hr>
+
+    <section id="main_content">
+      <h1>
+        <a name="bootstrap-limit" class="anchor" href="#bootstrap-limit"></a><a href="http://trongrg.github.io/bootstrap-limit">bootstrap-limit</a>
+      </h1>
+
+      <p>Inspired by <a href="https://twitter.com">twitter.com</a>'s tweet character countdown functionality</p>
+
+      <h2><a name="getting-started" class="anchor" href="#getting-started"></a>Getting Started</h2>
+      <ul>
+        <li>
+        <a href="/bootstrap-limit/releases/latest/bootstrap-limit.js.zip">Download zipball of latest release</a>.</li>
+        <li>Download latest <a href="/bootstrap-limit/releases/latest/bootstrap-limit.js">bootstrap-limit.js</a> or <a href="/bootstrap-limit/releases/latest/bootstrap-limit.min.js">bootstrap-limit.min.js</a>.</li>
+      </ul>
+      <p><strong>Note:</strong> bootstrap-limit has a dependency on <a href="http://jquery.com/">jQuery</a> 1.9+, which must be loaded before <em>bootstrap-limit</em>.</p>
+
+      <h2><a name="examples" class="anchor" href="#examples"></a>Examples</h2>
+
+      <p>For some working examples of bootstrap-limit, visit our <a href="http://trongrg.github.io/bootstrap-limit/examples">examples page</a>.</p>
+
+      <h2><a name="features" class="anchor" href="#features"></a>Features</h2>
+
+      <h2><a name="usage" class="anchor" href="#usage"></a>Usage</h2>
+
+      <h3><a name="api" class="anchor" href="#api"></a>API</h3>
+
+      <h4><a name="jquerybootstrap-limit" class="anchor" href="#jquerybootstrap-limit"></a>jQuery#limit</h4>
+
+      <p>Update the given counter for any <code>input</code> or <code>textarea</code> element</p>
+
+      <div class="highlight">
+        <pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input.limit'</span><span class="p">).</span><span class="nx">limit</span><span class="p">({</span> <span class="p">
+  counter: "#selector"
+});</span></pre>
+      </div>
+
+      <h3><a name="custom-events" class="anchor" href="#custom-events"></a>Custom Events</h3>
+
+      <p>bootstrap-limit triggers the following custom events:</p>
+
+      <ul>
+        <li><p><code>bootstrap-limit:initialized</code> –&nbsp;Triggered after initialization.</p></li>
+        <li><p><code>bootstrap-limit:crossed</code> –&nbsp;Triggered when the number of characters inside input/textarea crossed its allowed max length.</p></li>
+        <li><p><code>bootstrap-limit:uncrossed</code> –&nbsp;Triggered when the number of characters inside input/textarea uncrossed its allowed max length.</p></li>
+      </ul>
+
+      <h2><a name="browser-support" class="anchor" href="#browser-support"></a>Browser Support</h2>
+
+      <ul>
+        <li>Chrome</li>
+        <li>Firefox 3.5+</li>
+        <li>Safari 4+</li>
+        <li>Internet Explorer 7+</li>
+        <li>Opera 11+</li>
+      </ul>
+      <h2><a name="issues" class="anchor" href="#issues"></a>Issues</h2>
+
+      <p>Discovered a bug? Please create an issue here on GitHub!</p>
+
+      <p><a href="https://github.com/trongrg/bootstrap-limit/issues">https://github.com/trongrg/bootstrap-limit/issues</a></p>
+
+      <h2><a name="versioning" class="anchor" href="#versioning"></a>Versioning</h2>
+
+      <p>For transparency and insight into our release cycle, releases will be numbered with the follow format:</p>
+
+      <p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></p>
+
+      <p>And constructed with the following guidelines:</p>
+
+      <ul>
+        <li>Breaking backwards compatibility bumps the major</li>
+        <li>New additions without breaking backwards compatibility bumps the minor</li>
+        <li>Bug fixes and misc changes bump the patch</li>
+      </ul>
+      <p>For more information on semantic versioning, please visit <a href="http://semver.org/">http://semver.org/</a>.</p>
+
+      <h2><a name="testing" class="anchor" href="#testing"></a>Testing</h2>
+
+      <p>Tests are written using <a href="http://pivotal.github.com/jasmine/">Jasmine</a>. To run the test suite with PhantomJS, run <code>$ grunt test</code>. To run the test suite in your default browser, run <code>$ grunt test:browser</code>.</p>
+
+      <h2><a name="developers" class="anchor" href="#developers"></a>Developers</h2>
+
+      <p>If you plan on contributing to bootstrap-limit, be sure to read the <a href="https://github.com/trongrg/bootstrap-limit/blob/master/CONTRIBUTING.md">contributing guidelines</a>.</p>
+
+      <p>In order to build and test bootstrap-limit, you'll need to install its dev dependencies (<code>$ npm install</code>) and have <a href="https://github.com/gruntjs/grunt-cli">grunt-cli</a> installed (<code>$ npm install -g grunt-cli</code>). Below is an overview of the available Grunt tasks that'll be useful in development.</p>
+
+      <ul>
+        <li>
+        <code>grunt build</code> – Builds <em>bootstrap-limit</em> from source.</li>
+        <li>
+        <code>grunt lint</code> – Runs source and test files through JSHint.</li>
+        <li>
+        <code>grunt test</code> – Runs the test suite with PhantomJS.</li>
+        <li>
+        <code>grunt test:browser</code> – Runs the test suite in your default browser.</li>
+        <li>
+        <code>grunt watch</code> – Rebuilds <em>bootstrap-limit</em> whenever a source file is modified.</li>
+        <li>
+        <code>grunt server</code> – Serves files from the root of bootstrap-limit on localhost:8888. Useful for using <em>test/playground.html</em> for debugging/testing.</li>
+        <li>
+        <code>grunt dev</code> – Runs <code>grunt watch</code> and <code>grunt server</code> in parallel.</li>
+      </ul>
+      <h2><a name="authors" class="anchor" href="#authors"></a>Authors</h2>
+
+      <ul>
+        <li>
+        <strong>Trong Tran</strong> (<a href="https://github.com/trongrg">GitHub</a>)
+        </li>
+      </ul>
+      <h2><a name="shoutouts" class="anchor" href="#shoutouts"></a>Shoutouts!</h2>
+
+      <p>Thanks for assistance and contributions:</p>
+
+      <ul>
+        <li><a href="https://github.com/trongrg/bootstrap-limit/contributors">And many others!</a></li>
+      </ul>
+      <h2><a name="license" class="anchor" href="#license"></a>License</h2>
+
+      <p>Copyright 2013 TrongTran, Inc.</p>
+
+      <p>Licensed under the MIT License</p>
+    </section>
+
+    <footer>
+      Bootstrap-limit is maintained by <a href="https://github.com/trongrg">trongrg</a><br>
+      This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>

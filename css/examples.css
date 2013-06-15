@@ -1,0 +1,79 @@
+/* scaffolding */
+/* ----------- */
+
+html {
+  overflow-y: scroll;
+  *overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gist {
+  text-align: left;
+}
+
+/* base styles */
+/* ----------- */
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #333;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+/* site theme */
+/* ---------- */
+
+.title {
+  margin: 20px 0 0 0;
+  font-size: 64px;
+}
+
+.example {
+  padding: 30px 0;
+}
+
+.example-name {
+  margin: 20px 0;
+  font-size: 32px;
+}
+
+.demo {
+  position: relative;
+  *z-index: 1;
+  margin: 50px 0;
+}
+
+.limit, .input {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.limit {
+  background-color: #fff;
+}
+
+.limit:focus {
+  border: 2px solid #0097cf;
+}
+
+.gist {
+  font-size: 14px;
+}
