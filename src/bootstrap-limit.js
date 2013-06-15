@@ -11,7 +11,7 @@
 
   var BootstrapLimit = function ( element, options ) {
     this.$element = $(element);
-    this.options = $.extend({}, $.fn.limit.defaults, options);
+    this.options = $.extend({}, $.fn.limit.defaults, {maxLength: parseInt(this.$element.attr('maxlength'), 10)}, options);
     this.$counter = $(this.options.counter) || this.$counter;
     this.initialize();
   };

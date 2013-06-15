@@ -128,4 +128,17 @@ describe('BootstrapLimit', function(){
       expect(this.$input.attr('maxlength')).toBeUndefined();
     });
   });
+
+  describe('maxlength attribute', function() {
+    beforeEach(function() {
+      this.$input.limit({counter: '#counter'});
+      this.$input.val('12345').keyup();
+    });
+
+    it('uses maxlength attribute', function() {
+      console.log(this.$input.data('bootstrap-limit'));
+      expect(this.$input.data('bootstrap-limit').options.maxLength).toEqual(20);
+      expect(this.$counter.text()).toEqual('15');
+    });
+  });
 });
