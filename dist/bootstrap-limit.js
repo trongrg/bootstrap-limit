@@ -10,65 +10,81 @@ var VERSION = "0.0.1";
     "use strict";
     var BootstrapLimit = function(element, options) {
         this.$element = $(element);
-        this.options = $.extend({}, $.fn.limit.defaults, options);
-        this.maxLength = this.options.maxLength || this.maxLength;
-        this.counter = $(this.options.counter) || this.counter;
+        this.options = $.extend({}, $.fn.limit.defaults, {
+            maxLength: parseInt(this.$element.attr("maxlength"), 10)
+        }, options);
+        this.$counter = $(this.options.counter) || this.$counter;
         this.initialize();
-        this.listen();
-        this.check();
     };
     BootstrapLimit.prototype = {
         constructor: BootstrapLimit,
         initialize: function() {
-            var $element = this.$element;
-            $.when.apply($, this.$element).always(function() {
+            this.initEvents();
+            this.update();
+            if (this.options.removeMaxLengthAttr) {
+                this.$element.removeAttr("maxlength");
+            }
+            var self = this;
+            $.when.apply($, this.$element.get()).always(function() {
                 setTimeout(function() {
-                    $element.trigger("bootstrap-limit:initialized");
+                    self.$element.trigger("bootstrap-limit:initialized");
                 }, 0);
             });
         },
-        listen: function() {
+        initEvents: function() {
             this.$element.on("keypress", $.proxy(this.keypress, this)).on("keyup", $.proxy(this.keyup, this));
         },
-        check: function() {
+        update: function() {
             this.query = this.$element.val();
-            this.counter.text(this.maxLength - this.query.length);
-            if (this.query.length > this.maxLength) {
-                this.counter.css("color", "red");
+            this.$counter.text(this.options.maxLength - this.query.length);
+            if (this.query.length > this.options.maxLength) {
+                this.$counter.css("color", this.options.color);
                 this.$element.trigger("bootstrap-limit:crossed");
+            } else if (this.query.length > this.options.maxLength - this.options.threshold) {
+                this.$counter.css("color", this.options.color);
+                this.$element.trigger("bootstrap-limit:uncrossed");
             } else {
-                this.counter.css("color", "");
+                this.$counter.removeAttr("style");
                 this.$element.trigger("bootstrap-limit:uncrossed");
             }
         },
         keyup: function(e) {
-            this.check();
+            this.update();
             e.stopPropagation();
             e.preventDefault();
         },
         keypress: function(e) {
-            this.check();
+            this.update();
             e.stopPropagation();
         }
     };
     $.fn.limit = function(option) {
         return this.each(function() {
-            var $this = $(this), data = $this.data("limit"), options = typeof option == "object" && option;
-            if (!data) $this.data("limit", data = new BootstrapLimit(this, options));
-            if (typeof option == "string") data[option]();
+            var $this = $(this), data = $this.data("bootstrap-limit"), options = typeof option == "object" && option;
+            if (!data) {
+                $this.data("bootstrap-limit", data = new BootstrapLimit(this, options));
+            }
+            if (typeof option == "string") {
+                data[option]();
+            }
         });
     };
     $.fn.limit.defaults = {
         maxLength: 140,
-        counter: ""
+        color: "red",
+        threshold: 10,
+        counter: "",
+        removeMaxLengthAttr: false
     };
     $.fn.limit.Constructor = BootstrapLimit;
     $(function() {
-        $("body").on("focus.limit.data-api", '[data-provide="limit"]', function(e) {
+        $("body").on("focus.bootstrap-limit.data-api", '[data-provide="bootstrap-limit"]', function(e) {
             var $this = $(this);
-            if ($this.data("limit")) return;
+            if ($this.data("bootstrap-limit")) {
+                return;
+            }
             e.preventDefault();
-            $this.limit($this.data());
+            $this.limit($this.data().options);
         });
     });
 }(window.jQuery);
