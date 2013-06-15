@@ -91,4 +91,15 @@ describe('BootstrapLimit', function(){
       expect(this.spy).toHaveBeenCalled();
     });
   });
+
+  describe('custom color', function() {
+    beforeEach(function() {
+      this.$input.limit({maxLength: 10, counter: '#counter', color: 'blue'});
+      this.$input.val('12345678901').keyup();
+    });
+
+    it('changes counter color to custom color', function() {
+      expect(this.$counter.css('color')).toEqual('rgb(0, 0, 255)');
+    });
+  });
 });

@@ -14,6 +14,7 @@
     this.options = $.extend({}, $.fn.limit.defaults, options);
     this.maxLength = this.options.maxLength || this.maxLength;
     this.counter = $(this.options.counter) || this.counter;
+    this.color = this.options.color || this.color;
     this.initialize();
   };
 
@@ -46,7 +47,7 @@
       this.counter.text(this.maxLength - this.query.length);
 
       if (this.query.length > this.maxLength) {
-        this.counter.css('color', 'red');
+        this.counter.css('color', this.color);
         this.$element.trigger('bootstrap-limit:crossed');
       } else {
         this.counter.removeAttr('style');
@@ -86,6 +87,7 @@
 
   $.fn.limit.defaults = {
     maxLength: 140,
+    color: 'red',
     counter: ''
   };
 
