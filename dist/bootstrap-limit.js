@@ -84,7 +84,7 @@ var VERSION = "0.1.0";
                 return;
             }
             e.preventDefault();
-            $this.limit($this.data().options);
+            $this.limit($this.data());
         });
     });
 }(window.jQuery);
