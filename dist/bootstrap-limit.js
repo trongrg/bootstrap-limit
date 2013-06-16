@@ -1,10 +1,10 @@
 /*!
- * bootstrap-limit.js 0.0.1
+ * bootstrap-limit.js 0.1.0
  * https://github.com/trongrg/bootstrap-limit
  * Copyright 2013 TrongTran and other contributors; Licensed MIT
  */
 
-var VERSION = "0.0.1";
+var VERSION = "0.1.0";
 
 !function($) {
     "use strict";
