@@ -9,7 +9,7 @@ Getting Started
 ---------------
 
 * [Download zipball of latest release][zipball].
-* Download latest *[bootstrap-limit.js][bootstrap-limit.js]* or *[bootstrap-limit.min.js][bootstrap-limit.min.js]*.
+* Download latest [bootstrap-limit.js][bootstrap-limit.js] or [bootstrap-limit.min.js][bootstrap-limit.min.js].
 
 **Note:** bootstrap-limit has a dependency on [jQuery][jquery] 1.9+, which must be loaded before *bootstrap-limit*.
 
@@ -39,11 +39,11 @@ $('input.limit').limit({
 
 bootstrap-limit triggers the following custom events:
 
-* `bootstrap-limit:initialized` – Triggered after initialization. If data needs to be prefetched, this event will not be triggered until after the prefetched data is processed.
+* `bootstrap-limit:initialized` – Triggered after initialization.
 
-* `bootstrap-limit:crossed` – Triggered when the dropdown menu of a bootstrap-limit is opened.
+* `bootstrap-limit:crossed` – Triggered when the number of characters inside input/textarea crossed its allowed max length.
 
-* `bootstrap-limit:uncrossed` – Triggered when the dropdown menu of a bootstrap-limit is closed.
+* `bootstrap-limit:uncrossed` – Triggered when the number of characters inside input/textarea uncrossed its allowed max length.
 
 All custom events are triggered on the element initialized as a bootstrap-limit.
 
@@ -120,10 +120,11 @@ Licensed under the MIT License
 [twitter]: https://twitter.com
 [gh-page]: http://trongrg.github.io/bootstrap-limit
 [examples]: http://trongrg.github.io/bootstrap-limit/examples
-[@bootstrap-limit]: https://trongrg.github.com/bootstrap-limit
 
 <!-- assets -->
 [zipball]: http://trongrg.github.io/bootstrap-limit/releases/latest/bootstrap-limit.zip
+[bootstrap-limit.js]: http://trongrg.github.io/bootstrap-limit/releases/latest/bootstrap-limit.js
+[bootstrap-limit.min.js]: http://trongrg.github.io/bootstrap-limit/releases/latest/bootstrap-limit.js
 
 <!-- github links -->
 [contributing-guidelines]: https://github.com/trongrg/bootstrap-limit/blob/master/CONTRIBUTING.md
