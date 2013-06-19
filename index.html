@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <link href="https://fonts.googleapis.com/css?family=Chivo:900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
 <link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/stylesheet.css" media="screen">
 <link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/pygment_trac.css" media="screen">
 <link rel="stylesheet" type="text/css" href="https://github.com/themes/tactile/stylesheets/print.css" media="print">
@@ -63,6 +64,52 @@
   counter: "#selector"
 });</span></pre>
       </div>
+
+      <h3><a name="options" class="anchor" href="#options"></a>Options</h3>
+      <p>The list of all options and their default values</p>
+
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th style="width: 100px;">Name</th>
+            <th style="width: 50px;">Type</th>
+            <th style="width: 100px;">Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>maxLength</td>
+          <td>number</td>
+          <td>140</td>
+          <td>The max number of characters that is allowed. Default value will be overriden with the element's maxlength attribute, and both will be overriden with the given option</td>
+        </tr>
+        <tr>
+          <td>counter</td>
+          <td>jquery selector</td>
+          <td>blank</td>
+          <td>The jquery selector of the element which shows the counter. Default is blank which means no counter is displayed</td>
+        </tr>
+        <tr>
+          <td>removeMaxLengthAttr</td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Whether or not removing the maxlength attribute of the input/textarea</td>
+        </tr>
+        <tr>
+          <td>threshold</td>
+          <td>number</td>
+          <td>10</td>
+          <td>The number of characters left before counter's color get changed</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>css color</td>
+          <td>'red'</td>
+          <td>The color to which counter will be changed after number of remaining characters less than threshold</td>
+        </tr>
+        </tbody>
+      </table>
 
       <h3><a name="custom-events" class="anchor" href="#custom-events"></a>Custom Events</h3>
 

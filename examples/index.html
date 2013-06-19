@@ -73,9 +73,9 @@
     <thead>
       <tr>
         <th style="width: 100px;">Name</th>
-        <th style="width: 50px;">type</th>
-        <th style="width: 100px;">default</th>
-        <th>description</th>
+        <th style="width: 50px;">Type</th>
+        <th style="width: 100px;">Default</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
@@ -83,7 +83,7 @@
       <td>maxLength</td>
       <td>number</td>
       <td>140</td>
-      <td>The max number of characters that is allowed.</td>
+      <td>The max number of characters that is allowed. Default value will be overriden with the element's maxlength attribute, and both will be overriden with the given option</td>
     </tr>
     <tr>
       <td>counter</td>
@@ -107,7 +107,7 @@
       <td>color</td>
       <td>css color</td>
       <td>'red'</td>
-      <td>The color that counter will be changed to after number of characters exceed the threshold or max length</td>
+      <td>The color to which counter will be changed after number of remaining characters less than threshold</td>
     </tr>
     </tbody>
   </table>
