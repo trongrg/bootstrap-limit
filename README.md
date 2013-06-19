@@ -18,9 +18,6 @@ Examples
 
 For some working examples of bootstrap-limit, visit our [examples page][examples].
 
-Features
---------
-
 Usage
 -----
 
@@ -34,6 +31,16 @@ Turns any `input` or `textarea` element into a bootstrap-limit.
 $('input.limit').limit({
 });
 ```
+
+Options
+--------
+
+* `maxLength`: number, default 140, the max number of characters that is allowed. Default value will be overriden with the element's maxlength attribute, and both will be overriden with the given option
+* `counter`: jquery selector, default blank, the jquery selector of the element which shows the counter. Default is blank which means no counter is displayed
+* `removeMaxLengthAttr`: boolean, default false, whether or not removing the maxlength attribute of the input/textarea
+* `threshold`: number, default 10, the number of characters left before counter's color get changed
+* `color`: css color, default red, the color to which counter will be changed after number of remaining characters less than threshold
+
 
 ### Custom Events
 
