@@ -4,8 +4,6 @@
  * Copyright 2013 TrongTran and other contributors; Licensed MIT
  */
 
-var VERSION = "0.1.1";
-
 (function(factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {

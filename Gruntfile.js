@@ -1,7 +1,6 @@
 var semver = require('semver'),
     f = require('util').format,
     jsFiles = [
-      'src/version.js',
       'src/bootstrap-limit.js'
     ];
 
