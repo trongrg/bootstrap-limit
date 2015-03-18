@@ -1,12 +1,21 @@
 /*!
- * bootstrap-limit.js 0.1.0
+ * bootstrap-limit.js 0.1.1
  * https://github.com/trongrg/bootstrap-limit
  * Copyright 2013 TrongTran and other contributors; Licensed MIT
  */
 
-var VERSION = "0.1.0";
+var VERSION = "0.1.1";
 
-!function($) {
+(function(factory) {
+    "use strict";
+    if (typeof define === "function" && define.amd) {
+        define([ "jquery" ], factory);
+    } else if (typeof exports === "object") {
+        factory(require("jquery"));
+    } else {
+        factory(jQuery);
+    }
+})(function($) {
     "use strict";
     var BootstrapLimit = function(element, options) {
         this.$element = $(element);
@@ -87,4 +96,4 @@ var VERSION = "0.1.0";
             $this.limit($this.data());
         });
     });
-}(window.jQuery);
+});

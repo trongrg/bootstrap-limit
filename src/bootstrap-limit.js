@@ -5,7 +5,19 @@
  * Copyright 2013 TrongTran and other contributors; Licensed MIT
  * ============================================================ */
 
-!function( $ ){
+(function(factory) {
+
+  'use strict';
+
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory); // AMD
+  } else if (typeof exports === 'object') {
+    factory(require('jquery')); // CommonJS
+  } else {
+    factory(jQuery); // Browser globals
+  }
+
+})(function( $ ){
 
   'use strict';
 
@@ -115,4 +127,4 @@
     });
   });
 
-}( window.jQuery );
+});
