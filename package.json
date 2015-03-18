@@ -20,6 +20,9 @@
       "url": "https://github.com/trongrg"
     }
   ],
+  "dependencies": {
+    "jquery": "^1.9.0"
+  },
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-sed": "~0.1",
