@@ -18,10 +18,14 @@
     {
       "name": "Trong Tran",
       "url": "https://github.com/trongrg"
+    },
+    {
+      "name": "Isaac Gierard",
+      "url": "https://github.com/igierard"
     }
   ],
   "dependencies": {
-    "jquery": "^1.9.0"
+    "jquery": "~1.9.0 || ~2.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4",
